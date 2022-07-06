@@ -26,6 +26,7 @@ To configure a backend, add a nested backend block within the top-level terrafor
 
 The following example configures the remote backend.
 
+
 terraform {
   backend "remote" {
     organization = "example_corp"
@@ -35,6 +36,8 @@ terraform {
     }
   }
 }
+
+
 
 # or you can use terraform cloud block 
 
