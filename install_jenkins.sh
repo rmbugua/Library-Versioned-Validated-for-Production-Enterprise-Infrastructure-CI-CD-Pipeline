@@ -1,6 +1,20 @@
 #!/bin/bash
 sudo yum -y update
 
+sudo yum update -y
+
+sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+
+sudo cat /etc/system-release
+
+sudo yum install -y httpd mariadb-server
+
+sudo systemctl start httpd
+
+sudo systemctl enable httpd
+
+sudo systemctl is-enabled httpd
+
 echo "Install Java JDK 8"
 sudo yum remove -y java
 sudo amazon-linux-extras install java-openjdk11
