@@ -1,6 +1,6 @@
 resource "aws_launch_configuration" "as_conf" {
   name_prefix   = "terraform-lc-example-"
-  image_id      = aws_ami.amazon-linux-2.id
+  image_id      = data.aws_ami.amazon-linux-2
   instance_type = "t2.micro"
 
   lifecycle {
