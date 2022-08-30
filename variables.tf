@@ -31,10 +31,8 @@ variable "instance_type" {
 variable "instance_ami" {
 
 }
-variable "keyname" {
+variable "keyname" {}
   
 variable "label" {}
   
 variable "app" {}
-  
-}
