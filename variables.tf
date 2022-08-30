@@ -33,4 +33,8 @@ variable "instance_ami" {
 }
 variable "keyname" {
   
+variable "label" {}
+  
+variable "app" {}
+  
 }
