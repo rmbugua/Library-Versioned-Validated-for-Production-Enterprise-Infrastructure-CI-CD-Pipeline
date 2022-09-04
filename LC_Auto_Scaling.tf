@@ -1,6 +1,6 @@
 resource "aws_launch_configuration" "as_conf" {
   name_prefix   = "terraform-lc-example-"
-  image_id      = data.aws_ami.amazon-linux-2.id
+  image_id      = "${data.aws_ami.amazon-linux-2.id}"
   instance_type = "t2.micro"
 
   lifecycle {
@@ -10,7 +10,7 @@ resource "aws_launch_configuration" "as_conf" {
 
 resource "aws_autoscaling_group" "as_conf" {
   name                 = "terraform-asg-example"
-  launch_configuration = aws_launch_configuration.as_conf.name
+  launch_configuration = "${aws_launch_configuration.as_conf.name}"
   min_size             = 1
   max_size             = 2
 
