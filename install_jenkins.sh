@@ -84,8 +84,4 @@ wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war
 java -jar jenkins.war\
 
 
-sudo docker pull sonarqube -y 
-
-sudo docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube  
-
 
