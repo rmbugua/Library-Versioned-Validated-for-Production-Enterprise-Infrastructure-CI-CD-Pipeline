@@ -14,7 +14,7 @@ resource "aws_lb_target_group" "target-elb" {
   vpc_id   = "${aws_vpc.development-vpc}"
 }
 
-resource "aws_lb_target_group" "external-alb.arn" {
+resource "aws_lb_target_group" "external-alb" {
   # ...
 }
 
