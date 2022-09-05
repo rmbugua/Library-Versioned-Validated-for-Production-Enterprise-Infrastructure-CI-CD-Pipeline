@@ -4,7 +4,7 @@ resource "aws_lb" "external-alb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = "${aws_security_group.sg_allow_ssh_jenkins.id}"
-  subnets            = "$[aws_subnet.public-subnet-1.id,aws_subnet.public-subnet-2.id]"
+  subnets            = "$[aws_subnet.public-subnet-1.id:aws_subnet.public-subnet-2.id]"
 }
 
 resource "aws_lb_target_group" "target-elb" {
@@ -12,6 +12,10 @@ resource "aws_lb_target_group" "target-elb" {
   port     = 80
   protocol = "HTTP"
   vpc_id   = "${aws_vpc.development-vpc}"
+}
+
+resource "aws_lb_target_group" "external-alb.arn" {
+  # ...
 }
 
 resource "aws_lb_target_group_attachment" "attachment" {
@@ -25,7 +29,7 @@ resource "aws_lb_target_group_attachment" "attachment" {
 }
 
 resource "aws_lb_target_group_attachment" "attachment1" {
-  target_group_arn = aws_lb_target_group.external-alb.arn
+  target_group_arn = "${aws_lb_target_group.external-alb.arn}"
   target_id        = "${aws_instance.jenkins-instance.id}"
   port             = 80
 
