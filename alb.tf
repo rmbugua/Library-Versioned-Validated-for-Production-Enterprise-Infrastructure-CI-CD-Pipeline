@@ -3,7 +3,7 @@ resource "aws_lb" "external-alb" {
   name               = "external-alb"
   internal           = false
   load_balancer_type = "application"
-  security_groups    = "${aws_security_group.sg_allow_ssh_jenkins.id}"
+  security_groups    = [aws_security_group.sg_allow_ssh_jenkins.id]
   subnets            = [aws_subnet.public-subnet-1.id]
 }
 
