@@ -4,7 +4,7 @@ resource "aws_lb" "external-alb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = "${aws_security_group.sg_allow_ssh_jenkins.id}"
-  subnets            = [for subnet in aws_subnet.public : subnet.id]
+  subnets            = [for subnet in aws_subnet.public-subnet-1 : subnet.id]
 }
 
 resource "aws_lb_target_group" "target-elb" {
