@@ -4,14 +4,14 @@ resource "aws_lb" "external-alb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = "${aws_security_group.sg_allow_ssh_jenkins.id}"
-  subnets            = [for subnet in aws_subnet.public-subnet-1 : subnet.id]
+  subnets            = [aws_subnet.public-subnet-1.id]
 }
 
 resource "aws_lb_target_group" "target-elb" {
   name     = "target-elb"
   port     = 80
   protocol = "HTTP"
-  vpc_id   = "${aws_vpc.development-vpc}"
+  vpc_id   = "${aws_vpc.development-vpc.id}"
 }
 
 resource "aws_lb_target_group" "external-alb" {
