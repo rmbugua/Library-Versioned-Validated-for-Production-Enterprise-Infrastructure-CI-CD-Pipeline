@@ -17,7 +17,6 @@ resource "aws_lb" "external-alb" {
 
 resource "aws_lb_target_group" "target-elb" {
   name     = "target-elb"
-  port     = 80
   protocol = "HTTP"
   vpc_id   = "${aws_vpc.development-vpc.id}"
 }
