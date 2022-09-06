@@ -7,12 +7,10 @@ resource "aws_lb" "external-alb" {
    
   subnet_mapping {
     subnet_id     = "${aws_subnet.public-subnet-1.id}"
-    allocation_id = aws_eip.public-subnet-1.id
   }
 
   subnet_mapping {
     subnet_id     = "${aws_subnet.public-subnet-2.id}"
-    allocation_id = aws_eip.public-subnet-2.id
   }
 
 }
