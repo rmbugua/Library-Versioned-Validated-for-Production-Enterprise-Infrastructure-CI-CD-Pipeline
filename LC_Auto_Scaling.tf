@@ -10,7 +10,7 @@ resource "aws_launch_configuration" "as_conf" {
 
 resource "aws_autoscaling_group" "as_conf" {
   name                 = "terraform-asg-example"
-  availability_zone    = "${var.region}a"
+  availability_zones    = "${var.region}a"
   launch_configuration = "${aws_launch_configuration.as_conf.name}"
   min_size             = 1
   max_size             = 2
@@ -19,3 +19,4 @@ resource "aws_autoscaling_group" "as_conf" {
     create_before_destroy = true
   }
 }
+
