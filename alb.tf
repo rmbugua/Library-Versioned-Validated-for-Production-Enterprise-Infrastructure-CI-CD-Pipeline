@@ -4,7 +4,17 @@ resource "aws_lb" "external-alb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.sg_allow_ssh_jenkins.id]
-  subnets            = [aws_subnet.public-subnet-1.id]
+   
+  subnet_mapping {
+    subnet_id     = "${aws_subnet.public-subnet-1.id}"
+    allocation_id = aws_eip.public-subnet-1.id
+  }
+
+  subnet_mapping {
+    subnet_id     = "${aws_subnet.public-subnet-2.id}"
+    allocation_id = aws_eip.public-subnet-2.id
+  }
+
 }
 
 resource "aws_lb_target_group" "target-elb" {
