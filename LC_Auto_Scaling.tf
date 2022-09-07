@@ -9,7 +9,7 @@ resource "aws_launch_configuration" "as_conf" {
 }
 
 resource "aws_autoscaling_group" "as_conf" {
-  name                 = "terraform-asg-example"
+  name                 = "terraform-asg-example-1"
   availability_zones    = ["us-east-2a"]
   health_check_type     = "EC2"
   launch_configuration = "${aws_launch_configuration.as_conf.name}"
