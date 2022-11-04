@@ -12,6 +12,10 @@ How To Protect Sensitive Data in Terraform
 
 https://www.digitalocean.com/community/tutorials/how-to-protect-sensitive-data-in-terraform
 
+How To Deploy Multiple Environments in Your Terraform Project Without Duplicating Code
+
+https://www.digitalocean.com/community/tutorials/how-to-deploy-multiple-environments-with-workspaces-in-your-terraform-project
+
 This is a project demo in which jenkins CI server is provisioned using terraform. 
 
 Shell scripts are run using terraform and used to provision an EC2 server, install Apache Maven, Install Docker.io, Install git, install blueocean container jenkins and the Kubectl commandline interphase. 
