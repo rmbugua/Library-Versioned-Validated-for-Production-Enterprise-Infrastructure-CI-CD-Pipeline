@@ -19,8 +19,13 @@ https://www.digitalocean.com/community/tutorials/how-to-deploy-multiple-environm
 How To Build a Custom Terraform Module
 
 https://www.digitalocean.com/community/tutorials/how-to-build-a-custom-terraform-module
- 
 
+ElastiCache - Cases 
+https://aws.amazon.com/solutions/case-studies/mcdonalds/ 
+
+More Cases 
+https://aws.amazon.com/blogs/database/latency-reduction-of-hybrid-architectures-with-amazon-elasticache/#:~:text=Amazon%20ElastiCache%20is%20an%20effective,in%20case%20your%20database%20fails.
+ 
 # Backend Configuration
 
 A backend defines where Terraform stores its state data files.
