@@ -8,6 +8,10 @@ How To Improve Flexibility Using Terraform Variables, Dependencies, and Conditio
 
 https://www.digitalocean.com/community/tutorials/how-to-improve-flexibility-using-terraform-variables-dependencies-and-conditionals
 
+How To Protect Sensitive Data in Terraform
+
+https://www.digitalocean.com/community/tutorials/how-to-protect-sensitive-data-in-terraform
+
 This is a project demo in which jenkins CI server is provisioned using terraform. 
 
 Shell scripts are run using terraform and used to provision an EC2 server, install Apache Maven, Install Docker.io, Install git, install blueocean container jenkins and the Kubectl commandline interphase. 
