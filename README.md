@@ -4,6 +4,10 @@ How To Use Ansible with Terraform for Configuration Management
 
 https://www.digitalocean.com/community/tutorials/how-to-use-ansible-with-terraform-for-configuration-management
 
+How To Improve Flexibility Using Terraform Variables, Dependencies, and Conditionals
+
+https://www.digitalocean.com/community/tutorials/how-to-improve-flexibility-using-terraform-variables-dependencies-and-conditionals
+
 This is a project demo in which jenkins CI server is provisioned using terraform. 
 
 Shell scripts are run using terraform and used to provision an EC2 server, install Apache Maven, Install Docker.io, Install git, install blueocean container jenkins and the Kubectl commandline interphase. 
