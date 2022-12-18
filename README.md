@@ -1,3 +1,7 @@
+# Libary of version and validated infrastrcture 
+
+Library of versioned and validated infrastructure templates to be consumed for on-demand provisioning.
+
 # terraform-for-advanced-class
 
 How To Use Ansible with Terraform for Configuration Management
