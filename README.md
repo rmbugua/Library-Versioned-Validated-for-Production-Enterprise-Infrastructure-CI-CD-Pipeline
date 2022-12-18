@@ -1,4 +1,4 @@
-# Libary of version and validated infrastrcture 
+# Libary of version and validated infrastructure 
 
 Library of versioned and validated infrastructure templates to be consumed for on-demand provisioning.
 
