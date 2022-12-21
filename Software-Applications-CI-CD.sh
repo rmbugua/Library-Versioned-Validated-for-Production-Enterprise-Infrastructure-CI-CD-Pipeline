@@ -63,10 +63,12 @@ docker run \
   -d \
   -p 8080:8080 \
   -p 50000:50000 \
-  --name myjenkin \
-  -v jenkins-data:/var/jenkins_home \
+  --name jenkins \
   -v /var/run/docker.sock:/var/run/docker.sock \
+  -v $(which docker):/usr/bin/docker \
+  -v /home/jenkins_home:/var/jenkins_home \
   jenkins/jenkins
+  
   
 docker exec -it myjenkin bash
 cat /var/jenkins_home/secrets/initialAdminPassword
